@@ -22,6 +22,11 @@ window.onload = function(){
 		hideContent(clydeCon);
 		active = 0;
 	});
+
+}
+
+function imgHover(btn){
+
 }
 
 function showContent(clicked_content, other_content){

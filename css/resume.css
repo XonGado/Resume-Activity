@@ -94,6 +94,16 @@ body{
 	transition: 0.3s;
 }
 
+#gregg-btn > img,
+#clyde-btn > img{
+	-webkit-transition: filter 0.3s ease-out;
+}
+
+#gregg-btn > h1,
+#clyde-btn > h1{
+	-webkit-transition: border-bottom 0.3s ease-out;
+}
+
 #gregg-btn:focus,
 #gregg-btn:active,
 #clyde-btn:focus,
@@ -107,6 +117,16 @@ body{
 	transform: scale(0.9, 0.9);
 }
 
+#gregg-btn:hover > img,
+#clyde-btn:hover > img{
+	filter: grayscale(0);
+}
+
+#gregg-btn:hover > h1,
+#clyde-btn:hover > h1{
+	border-bottom: white 3px solid;
+}
+
 #gregg-btn > img,
 #clyde-btn > img{
 	border-radius: 50%;
@@ -115,7 +135,7 @@ body{
 	object-fit: cover;
 	object-position: center;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-	filter: grayscale(50%);
+	filter: grayscale(1);
 }
 
 #gregg-btn > h1,
