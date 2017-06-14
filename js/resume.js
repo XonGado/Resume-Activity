@@ -8,6 +8,10 @@ window.onload = function(){
 	var greggClo = document.getElementById("close-gregg");
 	var clydeClo = document.getElementById("close-clyde");
 
+	var clydeDet = document.getElementById("more-details-c");
+	var clydeBod = document.getElementById("clyde-body");
+	var clydeHed = document.getElementById("clyde-header");
+
 	greggBtn.addEventListener("click", function(){
 		showContent(greggCon, clydeCon);
 	});
@@ -21,6 +25,11 @@ window.onload = function(){
 	clydeClo.addEventListener("click", function(){
 		hideContent(clydeCon);
 		active = 0;
+	});
+
+	clydeDet.addEventListener("click", function(){
+		clydeHed.style.width = 40 + "%";
+		showDetails(clydeBod);
 	});
 }
 
@@ -37,4 +46,17 @@ function showContent(clicked_content, other_content){
 
 function hideContent(content){
 	content.style.top = 100 + "vh";
+}
+
+function showDetails(details){
+	var divisions = details.children;
+	console.log(divisions);
+
+	details.style.left = 35 + "vw";
+
+	for (var i = 0; i < divisions.length; i++) {
+		// setTimeout(function(){
+			divisions[i].style = "transform: rotateY(0);";
+		// }, 250);
+	}
 }
