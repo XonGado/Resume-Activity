@@ -3,6 +3,7 @@
 <head>
 	<title>Gregg's Profile</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 </head>
 <body>
@@ -10,23 +11,31 @@
 		<a href="resume.html"><i class="small material-icons">arrow_back</i>Home</a>
 		<a class="active" href="#"><img src="images/gregg2.png"> Gregg's Profile</a>
 		<a href="clyde.html"><img src="images/clyde2.png">Clyde's Profile</a>
+		<a class="int" href="#education"><span class="fa fa-graduation-cap"></span>&nbsp;Education</a>
+		<a class="int" href="#programs"><span class="fa fa-code"></span>&nbsp;Programming Skills</a>
+		<a class="int" href="#projects"><span class="fa fa-file"></span>&nbsp;Portfolio</a>
+		<a class="int" href="#affiliations"><span class="fa fa-users"></span>&nbsp;Affiliations</a>
+		<a class="int" href="#contact-details"><span class="fa fa-phone"></span>&nbsp;Contact</a>
 	</nav>
 	<div id="education">
+		<span class="fa fa-graduation-cap fa-6 header-icon"></span>
+		<!-- <img class="header-icon" src="images/school.png" alt="school"> -->
 		<h3 class="heading education">Education</h3>
 		<ul>
 			<li>
-				<h2>Highschool</h2>
-				<p>2010-2014</p>
-				<p>Regional Science High School for Region VI</p>
+				<h2>Regional Science High School for Region VI</h2>
+				<p class="date">2010-2014</p>
+				<p>Highschool</p>
 			</li>
 			<li>
-				<h2>College</h2>
-				<p>2014-present</p>
-				<p>University of the Philippines Visayas</p>
+				<h2>University of the Philippines Visayas</h2>
+				<p class="date">2014-present</p>
+				<p>College</p>
 			</li>
 		</ul>
 	</div>
 	<div id="programs">
+		<span class="fa fa-code fa-6 header-icon"></span>
 		<h3 class="heading programs">Programming Skills</h3>
 		<div id="lvl-projection">
 			<p id="language">&nbsp;</p>
@@ -50,6 +59,7 @@
 		</ul>
 	</div>
 	<div id="projects">
+		<span class="fa fa-file fa-6 header-icon"></span>
 		<h3 class="heading">Portfolio</h3>
 		<div>
 			<article>
@@ -78,20 +88,31 @@
 			</article>
 		</div>
 	</div>
-	<div id="hobbies">
-		<h3 class="heading">Hobbies</h3>
-	</div>
 	<div id="affiliations">
+		<span class="fa fa-users fa-6 header-icon"></span>
 		<h3 class="heading">Affiliations</h3>
 		<ul>
-			<li>UP Akeanon (2014-present) Member</li>
-			<li>Elektrons (2014-present) Member</li>
-			<li>Komsai.Org (2014-2016) Member</li>
-			<li>Komsai.Org (2016-2017) Secretary</li>
+			<li>
+				<h1>UP Akeanon <small>(2014-present)</small></h1>
+				<p>Member</p>
+			</li>
+			<li>
+				<h1>Elektrons <small>(2014-present)</small></h1>
+				<p>Member</p>
+			</li>
+			<li>
+				<h1>Komsai.Org <small>(2014-present)</small></h1>
+				<p>Member</p>
+			</li>
+			<li>
+				<p>Secretay</p>
+				<h1>Komsai.Org <small>(2016-2017)</small></h1>
+			</li>
 		</ul>
 	</div>
 	<div id="contact-details">
 		<!-- <h3 class="heading">Contact Details</h3> -->
+		<h3 class="heading">Reach Gregg through the following</h3>
 		<ul>
 			<li><i class="fa fa-envelope"></i> gmicay123@gmail.com</li>
 			<li><i class="fa fa-github"></i> github.com/gregg0912</li>
@@ -100,5 +121,15 @@
 		</ul>
 	</div>
 	<script type="text/javascript" src="js/profile.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).on('click', 'a.int', function(event){
+		    event.preventDefault();
+
+		    $('html, body').animate({
+		        scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+		    }, 500);
+		});
+	</script>
 </body>
 </html>

@@ -40,8 +40,9 @@ body{
 #navigation{
 	display: flex;
 	align-items: stretch;
-	background: linear-gradient(#7496ef, rgba(116, 150, 239, 0.3), rgba(0, 0, 0, 0)); 
-	padding-bottom: 30px;
+	background-color: #7496ef;
+	/* background: linear-gradient(#7496ef, rgba(116, 150, 239, 0.3), rgba(0, 0, 0, 0));  */
+	/* padding-bottom: 30px; */
 	position: fixed;
 	z-index: 10;
 	top: 0;
@@ -76,7 +77,7 @@ body{
 body > div{
 	display: flex;
 	min-height: 90vh;
-	margin: 5vh 0;
+	margin: 20vh 0;
 	justify-content: center;
 	align-items: center!important;
 	flex-direction: column;
@@ -92,7 +93,7 @@ body > div{
 }
 
 #education > ul > li{
-	/* text-align: center; */
+	text-align: center;
 	background-color: rgba(255, 255, 255, 0.2);
 	width: 100%;
 	margin: 1%;
@@ -105,12 +106,13 @@ body > div{
 
 #education > ul > li > p{
 	margin: 0;
-	float: left;
+	/* float: left; */
 	padding: 16px 12px 0 0;
 }
 
 #education .date{
-	clear: both;
+	/* clear: both; */
+	color: #ffdd6a;
 } 
 
 #education .heading{
@@ -244,8 +246,15 @@ body > div{
 	margin: 0 auto;
 }
 
+.header-icon.fa{
+	text-align: center;
+	font-size: 5em;
+	transform: translate(0, 25%);
+}
+
 #contact-details ul{
 	list-style: none;
+	width: 50%;
 }
 
 #contact-details ul li{
@@ -254,12 +263,18 @@ body > div{
 	display: flex;
 	align-items: center;
 	color: rgba(255, 255, 255, 0.8);
+	/* color: #ffdd6a; */
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 0.5em;
+	border-radius: 4px;
 }
 
 #contact-details ul li i{
 	font-size: 1.5em;
 	color: white;
 	margin-right: 0.5em;
+	padding-right: 0.5em;
+	border-right: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 #projects > div{
@@ -286,7 +301,8 @@ body > div{
 #projects > div > article h1 small{
 	/* margin-left: 0.5em; */
 	display: block;
-	color: rgba(255, 255, 255, 0.5);
+	color: #ffdd6a;
+	/* color: rgba(255, 255, 255, 0.5); */
 	font-size: 0.6em;
 	font-weight: normal;
 	font-style: italic;
@@ -294,4 +310,44 @@ body > div{
 
 #projects .short-description{
 	text-align: center;
+}
+
+#affiliations > ul{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	list-style: none;
+	width: 35%;
+}
+
+#affiliations > ul li{
+	background-color: rgba(255, 255, 255, 0.2);
+	margin-bottom: 0.5em;
+	padding: 1em;
+	border-radius: 4px;
+}
+
+#affiliations > ul li p{
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+	margin: 0;
+}
+
+#affiliations > ul p:after{
+	content: " of";
+}
+
+#affiliations > ul h1{
+	font-family: Oswald;
+	color: white;
+	font-style: italic;
+	font-weight: normal;
+	margin: auto;
+	text-align: center;
+}
+
+#affiliations > ul h1 small{
+	display: block;
+	color: #ffdd6a;
+	font-size: 0.7em;
 }
