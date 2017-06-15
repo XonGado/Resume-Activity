@@ -2,30 +2,34 @@
 <html>
 <head>
 	<title>Clyde's Profile</title>
-	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/profile.css"/>
 </head>
 <body>
 	<nav id="navigation">
 		<a href="resume.html"><i class="small material-icons">arrow_back</i>Home</a>
 		<a href="gregg.html"><img src="images/gregg2.png"> Gregg's Profile</a>
-		<a href="#"><img src="images/clyde2.png">Clyde's Profile</a>
+		<a class="active" href="#"><img src="images/clyde2.png">Clyde's Profile</a>
 	</nav>
-	<!-- <div id="education">
+	<div id="education">
+	<img class="header-icon" src="images/school.png" alt="school">
 		<h3 class="heading education">Education</h3>
 		<ul>
 			<li>
-				<h2>Highschool</h2>
-				<p>2010-2014</p>
-				<p>Antique National School</p>
+				<h2>Antique National School</h2>
+				<p class="section">Special Program in the Arts</p>
+				<p>Highschool</p>
+				<p class="date">2010-2014</p>
 			</li>
 			<li>
-				<h2>College</h2>
-				<p>2014-present</p>
-				<p>University of the Philippines Visayas</p>
+				<h2>University of the Philippines Visayas</h2>
+				<p class="section">BS in Computer Science</p>
+				<p>College</p>
+				<p class="date">2014-present</p>
 			</li>
 		</ul>
-	</div> -->
+	</div>
 	<div id="programs">
 		<h3 class="heading programs">Programming Skills</h3>
 		<div id="lvl-projection">
@@ -47,8 +51,46 @@
 			<li class="c" data-rating="60"><i>C</i></li>
 		</ul>
 	</div>
+	<div id="projects">
+		<h3 class="heading">Portfolio</h3>
+		<div>
+			<article>
+				<h1>Tindero<small>Accenture Program the Future entry</small></h1>
+				<p class="short-description">
+					Web based platform for Sari-Sari stores in the Philippines.
+				</p>
+			</article>
+			<article>
+				<h1>Tourista<small>CMSC 128 - A.Y. 2016-2017 1st Semester</small></h1>
+				<p class="short-description">
+					Web platform for tourista and locals to connect.
+				</p>
+			</article>
+			<article>
+				<h1>UP Connect<small>CMSC 129 - A.Y. 2016-2017 1st Semester</small></h1>
+				<p class="short-description">
+					Web platform for students and teachers to communicate and collaborate.
+				</p>
+			</article>
+			<article>
+				<h1>Grovewatch<small>CMSC 126 - A.Y. 2016-2017 2nd Semester</small></h1>
+				<p class="short-description">
+					A Plants vs. Zombies game parody implemented in JavaScript.
+				</p>
+			</article>
+		</div>
+	</div>
 	<div id="hobbies">
 		<h3 class="heading">Hobbies</h3>
+	</div>
+	<div id="contact-details">
+		<!-- <h3 class="heading">Contact Details</h3> -->
+		<ul>
+			<li><i class="fa fa-envelope"></i> cjubs.delgado@gmail.com</li>
+			<li><i class="fa fa-github"></i> github.com/XonGado</li>
+			<li><i class="fa fa-phone"></i> +63 917 702 7628</li>
+			<li><i class="fa fa-home"></i> San Pedro, San Jose de Buenavista, Antique</li>
+		</ul>
 	</div>
 	<script type="text/javascript" src="js/profile.js"></script>
 </body>
