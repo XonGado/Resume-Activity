@@ -8,26 +8,28 @@
 </head>
 <body>
 	<nav id="navigation">
-		<a href="resume.html"><i class="small material-icons">arrow_back</i>Home</a>
+		<a href="resume.html"><i class="fa fa-arrow-left"></i></a>
 		<a href="gregg.html"><img src="images/gregg2.png"> Gregg's Profile</a>
 		<a class="active" href="#"><img src="images/clyde2.png">Clyde's Profile</a>
-		<a class="int" href="#education"><span class="fa fa-graduation-cap"></span>&nbsp;Education</a>
-		<a class="int" href="#programs"><span class="fa fa-code"></span>&nbsp;Programming Skills</a>
-		<a class="int" href="#projects"><span class="fa fa-file"></span>&nbsp;Portfolio</a>
-		<a class="int" href="#affiliations"><span class="fa fa-users"></span>&nbsp;Affiliations</a>
-		<a class="int" href="#contact-details"><span class="fa fa-phone"></span>&nbsp;Contact</a>
+		<a class="int" href="#education"><span class="fa fa-graduation-cap"></span></a>
+		<a class="int" href="#programs"><span class="fa fa-code"></span></a>
+		<a class="int" href="#projects"><span class="fa fa-file"></span></a>
+		<a class="int" href="#affiliations"><span class="fa fa-users"></span></a>
+		<a class="int" href="#contact-details"><span class="fa fa-phone"></span></a>
 	</nav>
 	<div id="education">
-		<span class="fa fa-graduation-cap fa-6 header-icon"></span>
-		<h3 class="heading education">Education</h3>
+		
+		<h3 class="heading"><span class="fa fa-graduation-cap"></span> Education</h3>
 		<ul>
-			<li>
+			<li class="card">
+				<img src="images/ans2.png" alt="school's image">
 				<h2>Antique National School</h2>
 				<p class="date">2010-2014</p>
 				<p class="section">Special Program in the Arts</p>
 				<p>Highschool</p>
 			</li>
-			<li>
+			<li class="card">
+				<img src="images/upv.png" alt="school's image">
 				<h2>University of the Philippines Visayas</h2>
 				<p class="date">2014-present</p>
 				<p class="section">BS in Computer Science</p>
@@ -36,88 +38,108 @@
 		</ul>
 	</div>
 	<div id="programs">
-		<span class="fa fa-code fa-6 header-icon"></span>
-		<h3 class="heading programs">Programming Skills</h3>
-		<div id="lvl-projection">
-			<p id="language">&nbsp;</p>
-			<p id="rating">0</p>
-			<div id="bar">
-				<div id="inner-bar"></div>
+		<h3 class="heading"><span class="fa fa-code"></span>Programming Skills</h3>
+		<div class="stretcher">
+			<ul>
+				<li class="ruby" data-rating="70"><i>Ruby</i></li>
+				<li class="html" data-rating="95"><i>HTML5</i></li>
+				<li class="java" data-rating="70"><i>Java</i></li>
+				<li class="js" data-rating="80"><i>JavaScript</i></li>
+				<li class="python" data-rating="60"><i>Python</i></li>
+				<li class="assm" data-rating="70"><i>Assembly</i></li>
+				<li class="css" data-rating="95"><i>CSS3</i></li>
+				<li class="php" data-rating="80"><i>PHP</i></li>
+				<li class="c" data-rating="60"><i>C</i></li>
+			</ul>
+			<div class="card" id="lvl-projection">
+				<p id="language">Select an language</p>
+				<p id="rating">0</p>
+				<div id="bar">
+					<div id="inner-bar"></div>
+				</div>
 			</div>
 		</div>
-		<ul>
-			<li class="ruby" data-rating="70"><i>Ruby</i></li>
-			<li class="html" data-rating="95"><i>HTML5</i></li>
-			<li class="java" data-rating="70"><i>Java</i></li>
-			<li class="js" data-rating="80"><i>JavaScript</i></li>
-			<li class="python" data-rating="60"><i>Python</i></li>
-			<li class="assm" data-rating="70"><i>Assembly</i></li>
-			<li class="css" data-rating="95"><i>CSS3</i></li>
-			<li class="php" data-rating="80"><i>PHP</i></li>
-			<li class="c" data-rating="60"><i>C</i></li>
-		</ul>
 	</div>
 	<div id="projects">
-		<span class="fa fa-file fa-6 header-icon"></span>
-		<h3 class="heading">Portfolio</h3>
+		
+		<h3 class="heading"><span class="fa fa-file"></span> Portfolio</h3>
 		<div>
-			<article>
-				<h1>Tindero<small>Accenture Program the Future entry</small></h1>
-				<p class="short-description">
-					Web based platform for Sari-Sari stores in the Philippines.
-				</p>
+			<!-- <article class="card">
+				<img src="" alt="project's screenshot">
+				<div class="details">
+					<h1>Tindero<small>Accenture Program the Future entry</small></h1>
+					<p class="short-description">
+						Web based platform for Sari-Sari stores in the Philippines.
+					</p>
+				</div>
+			</article> -->
+			<article class="card">
+				<img src="images/tourista.png" alt="project's screenshot">
+				<div class="details">
+					<h1>Tourista<small>CMSC 128 - A.Y. 2016-2017 1st Semester</small></h1>
+					<p class="short-description">
+						Web platform for tourista and locals to connect and help promote tourists spots through crowd sourcing.
+					</p>
+				</div>
 			</article>
-			<article>
-				<h1>Tourista<small>CMSC 128 - A.Y. 2016-2017 1st Semester</small></h1>
-				<p class="short-description">
-					Web platform for tourista and locals to connect.
-				</p>
+			<article class="card">
+				<img src="images/isko.png" alt="project's screenshot">
+				<div class="details">
+					<h1>Iskolarship<small>CMSC 129 - A.Y. 2016-2017 2nd Semester</small></h1>
+					<p class="short-description">
+						Web platform for scholars top apply for scholarships and sponsors to accept scholars with messaging as additional feature implemented in PHP Laravel framework.
+					</p>
+				</div>
 			</article>
-			<article>
-				<h1>UP Connect<small>CMSC 129 - A.Y. 2016-2017 1st Semester</small></h1>
-				<p class="short-description">
-					Web platform for students and teachers to communicate and collaborate.
-				</p>
-			</article>
-			<article>
-				<h1>Grovewatch<small>CMSC 126 - A.Y. 2016-2017 2nd Semester</small></h1>
-				<p class="short-description">
-					A Plants vs. Zombies game parody implemented in JavaScript.
-				</p>
+			<article class="card">
+				<img src="images/grove.png" alt="project's screenshot">
+				<div class="details">
+					<h1>Grovewatch<small>CMSC 126 - A.Y. 2016-2017 2nd Semester</small></h1>
+					<p class="short-description">
+						A Plants vs. Zombies game parody implemented in JavaScript.
+					</p>
+				</div>
 			</article>
 		</div>
 	</div>
 	<div id="affiliations">
-		<span class="fa fa-users fa-6 header-icon"></span>
-		<h3 class="heading">Affiliations</h3>
+		
+		<h3 class="heading"><span class="fa fa-users"></span> Affiliations</h3>
 		<ul>
-			<li>
+			<li class="card none">
+				<img src="" alt="organization's photo">
 				<p>Member</p>
 				<h1>Elektrons <small>(2014-present)</small></h1>
 			</li>
-			<li>
+			<li class="card none">
+				<img src="" alt="organization's photo">
 				<p>Publications Officer</p>
 				<h1>Elektrons <small>(2015-2016)</small></h1>
 			</li>
-			<li>
+			<li class="card">
+				<img src="images/komsai.png" alt="organization's photo">
 				<p>Member</p>
 				<h1>Komsai.Org <small>(2014-present)</small></h1>
 			</li>
-			<li>
+			<li class="card">
+				<img src="images/komsai.png" alt="organization's photo">
 				<p>Publications Officer</p>
 				<h1>Komsai.Org <small>(2015-2017)</small></h1>
 			</li>
 		</ul>
 	</div>
-	<div id="contact-details">
-		<h3 class="heading">Reach Clyde through the following</h3>
-		<ul>
+	<footer id="contact-details">
+		<ul class="contact-details">
 			<li><i class="fa fa-envelope"></i> cjubs.delgado@gmail.com</li>
-			<li><i class="fa fa-github"></i> github.com/XonGado</li>
 			<li><i class="fa fa-phone"></i> +63 917 702 7628</li>
 			<li><i class="fa fa-home"></i> San Pedro, San Jose de Buenavista, Antique</li>
 		</ul>
-	</div>
+		<ul class="external">
+			<li><a href="twitter.com/XonGado"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="facebook.com/XonGado"><i class="fa fa-facebook-square"></i></a></li>
+			<li><a href="github.com/XonGado"><i class="fa fa-github"></i></a></li>
+		</ul>
+	</footer>
 	<script type="text/javascript" src="js/profile.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -125,7 +147,7 @@
 		    event.preventDefault();
 
 		    $('html, body').animate({
-		        scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+		        scrollTop: $( $.attr(this, 'href') ).offset().top - 60
 		    }, 1000);
 		});
 	</script>

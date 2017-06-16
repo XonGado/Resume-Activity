@@ -1,15 +1,16 @@
 *{
 	font-family: Roboto;
 	/* font-family: "Roboto Thin"; */
-	color: white;
+	color: #555;
 	box-sizing: border-box;
-	text-rendering: geometricPrecision;
+	/* text-rendering: geometricPrecision; */
 }
 
 body{
-	/* background-color: white; */
-	margin: 0;
-	background: linear-gradient(#6385de, #5274cd);
+	background-color: rgba(0, 0, 0, 0.02);
+	margin: 50px 0 0 0;
+	padding-top: 25px;
+	/* background: linear-gradient(#6385de, #5274cd); */
 	/* background: linear-gradient(45deg, #4163bc, #1851e9); */
 }
 
@@ -19,13 +20,13 @@ body{
 }
 
 ::-webkit-scrollbar-track{
-	background-color: #6385de;
+	background-color: #AAA;
 	width: 5px;
 }
 
 ::-webkit-scrollbar-thumb{
 	opacity: 0.5;
-	background-color: #a7c7ff;
+	background-color: #DDD;
 	border-radius: 1em;
 
 }
@@ -40,9 +41,10 @@ body{
 #navigation{
 	display: flex;
 	align-items: stretch;
-	background-color: #7496ef;
+	background-color: white;
 	/* background: linear-gradient(#7496ef, rgba(116, 150, 239, 0.3), rgba(0, 0, 0, 0));  */
 	/* padding-bottom: 30px; */
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 	position: fixed;
 	z-index: 10;
 	top: 0;
@@ -56,48 +58,68 @@ body{
 	justify-content: center;
 	align-items: center;
 	font-size: 0.9em;
+	/* font-weight: bold; */
 	text-decoration: none;
 	transition: 0.2s;
 }
 
-#navigation a:hover,
+#navigation a:hover{
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
 #navigation a.active{
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(0, 0, 0, 0.3);
+	cursor: default;
 }
 
 .heading{
-	font-size: 3.5em;
+	font-size: 2.5em;
 	text-align: center;
 	font-weight: normal;
 	font-family: Oswald;
-	/* font-weight:  */
+	margin: 0 0 0.5em 0;
 	font-style: italic;
 }
 
 body > div{
 	display: flex;
-	min-height: 90vh;
-	margin: 20vh 0;
+	/* min-height: 90vh; */
+	margin-bottom: 10vh;
 	justify-content: center;
 	align-items: center!important;
 	flex-direction: column;
 }
 
+.card{
+	background-color: white;
+	box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.2); 
+	padding: 1em 0.75em;
+	margin: 1%;
+}
+
+.card img{
+	object-position: center;
+	object-fit: cover;
+	text-align: center;
+}
+
+#education .card > img{
+	width: 100%;
+	height: 200px;
+}
+
 #education > ul{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	list-style: none;
-	width: 40%;
-	flex-direction: column;
+	width: 80%;
+	flex-direction: row;
 }
 
 #education > ul > li{
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.2);
-	width: 100%;
-	margin: 1%;
-	padding: 1em;
+	width: 48%;
 }
 
 #education > ul > li > h2{
@@ -115,10 +137,6 @@ body > div{
 	color: #ffdd6a;
 } 
 
-#education .heading{
-	margin: 0;
-}
-
 #education .section{
 	font-style: italic;
 }
@@ -127,77 +145,69 @@ body > div{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	overflow: auto;
-	align-items: center;
+	overflow: visible;
 	justify-content: center;
 	width: 100%;
-}
-
-#programs > *{
-	/* float: left; */
 }
 
 #programs > .heading{
 	width: 100%;
-	/* background-color: skyblue; */
-	/* margin: 0; */
-	margin: 0;
 }
 
-#programs > ul{
-	width: 60%;
-	/* margin: 0 20%; */
-	/* background-color: gray; */
+#programs ul{
+	width: 10%;
 	padding: 0;
 	list-style: none;
 	display: flex;
-	/* flex-wrap: wrap; */
-	margin: 0 auto;
 	justify-content: center;
+	align-items: flex-end;
 	border-radius: 4px;
 	overflow: hidden;
+	flex-direction: column;
+	margin: 0;
 }
 
-#programs > ul li{
-	width: 15%;
-	/* margin: 1%; */
-	/* padding-top: 31%; */
+#programs ul li{
 	position: relative;
 	background-color: rgba(255, 255, 255, 0.1);
-	/* border-radius: 50%; */
 	text-align: center;
 	padding: 6px;
 }
 
-#programs > ul li.java 	{background-color: #FB8C00;}
-#programs > ul li.html 	{background-color: #F4511E;}
-#programs > ul li.css 	{background-color: #1E88E5;}
-#programs > ul li.ruby 	{background-color: #D81B60;}
-#programs > ul li.python{background-color: #FBC02D;}
-#programs > ul li.c 	{background-color: #673AB7;}
-#programs > ul li.assm 	{background-color: #00ACC1;}
-#programs > ul li.php 	{background-color: #5C6BC0;}
-#programs > ul li.js 	{background-color: #FFB300;}
+#programs ul li.java 	{background-color: #FB8C00;}
+#programs ul li.html 	{background-color: #F4511E;}
+#programs ul li.css 	{background-color: #1E88E5;}
+#programs ul li.ruby 	{background-color: #D81B60;}
+#programs ul li.python 	{background-color: #FBC02D;}
+#programs ul li.c 		{background-color: #673AB7;}
+#programs ul li.assm 	{background-color: #00ACC1;}
+#programs ul li.php 	{background-color: #5C6BC0;}
+#programs ul li.js 		{background-color: #FFB300;}
+#programs ul li.mysql 	{background-color: #9C27B0;}
+#programs ul li.perl 	{background-color: #FFCCBC;}
 
-#programs > ul li:hover{
+#programs ul li:hover{
 	filter: brightness(110%);
 	cursor: pointer;
-	/* box-shadow:  0 0 10px rgba(255,255,255,0.5); */
 }
 
-#programs > ul li i{
-	/* font-size: 1.25em; */
-	/* position: absolute; */
+#programs ul li i{
 	color: white;
-	/* top: 50%; */
-	/* left: 50%; */
-	/* transform: translate(-50%, -50%); */
+}
+
+.stretcher{
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#programs > .stretcher{
+	margin: 1% 0;
+	width: 70%;
 }
 
 #lvl-projection{
-	width: 50%;
-	/* background-color: white; */
-	float: left;
+	width: 40%;
 	margin: 0;
 	display: flex;
 	justify-content: center;
@@ -218,7 +228,7 @@ body > div{
 }
 
 #inner-bar{
-	width: 50%;
+	width: 0;
 	margin: 0;
 	/* float: left; */
 	background-color: white;
@@ -236,45 +246,43 @@ body > div{
 }
 
 #language{
-	font-size: 3em;
+	font-size: 2em;
 	margin: 0 0 0.25em 0;
 }
 
-.header-icon{
-	width: 5em;
-	display: block;
-	margin: 0 auto;
-}
-
-.header-icon.fa{
-	text-align: center;
-	font-size: 5em;
-	transform: translate(0, 25%);
+#contact-details{
+	background-color: white;
+	box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.15);
+	padding: 1.5em 3em;
+	overflow: auto;
 }
 
 #contact-details ul{
 	list-style: none;
-	width: 50%;
+	margin: 0;
 }
 
-#contact-details ul li{
+#contact-details .external{
+	float: right;
 	font-size: 1.5em;
-	margin-bottom: 1em;
+	width: 25%;
 	display: flex;
-	align-items: center;
-	color: rgba(255, 255, 255, 0.8);
-	/* color: #ffdd6a; */
-	background-color: rgba(255, 255, 255, 0.2);
-	padding: 0.5em;
-	border-radius: 4px;
+	justify-content: flex-end;
 }
 
-#contact-details ul li i{
-	font-size: 1.5em;
-	color: white;
-	margin-right: 0.5em;
-	padding-right: 0.5em;
-	border-right: 2px solid rgba(255, 255, 255, 0.5);
+#contact-details .external li{
+	margin: 0 0.25em;
+}
+
+#contact-details .contact-details{
+	float: left;
+	display: flex;
+	width: 75%;
+}
+
+#contact-details .contact-details li{
+	padding: 0 0.5em;
+	font-size: 1.2em;
 }
 
 #projects > div{
@@ -288,9 +296,10 @@ body > div{
 #projects > div > article{
 	background-color: rgba(255, 255, 255, 0.2);
 	padding: 1em;
-	margin: 2%;
-	width: 46%;
+	margin: 1% 0;
+	width: 100%;
 	border-radius: 4px;
+	display: flex;
 }
 
 #projects > div > article h1{
@@ -301,7 +310,7 @@ body > div{
 #projects > div > article h1 small{
 	/* margin-left: 0.5em; */
 	display: block;
-	color: #ffdd6a;
+	color: #edc745;
 	/* color: rgba(255, 255, 255, 0.5); */
 	font-size: 0.6em;
 	font-weight: normal;
@@ -310,26 +319,52 @@ body > div{
 
 #projects .short-description{
 	text-align: center;
+	width: 100%;
+}
+
+#projects .details{
+	width: 30%;
+}
+
+
+#projects .card img{
+	display: block;
+	height: 300px;
+	width: 70%;
+	box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+#projects.gregg .card img{
+	display: none;
+}
+
+#projects.gregg .details{
+	width: 100%;
+}
+
+#affiliations .card img{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 10px auto;
+	text-align: center;
+	vertical-align: middle;
 }
 
 #affiliations > ul{
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
 	list-style: none;
-	width: 35%;
+	flex-wrap: wrap;
+	width: 80%;
 }
 
 #affiliations > ul li{
-	background-color: rgba(255, 255, 255, 0.2);
-	margin-bottom: 0.5em;
-	padding: 1em;
-	border-radius: 4px;
+	width: 23%;
 }
 
 #affiliations > ul li p{
 	text-align: center;
-	color: rgba(255, 255, 255, 0.8);
 	margin: 0;
 }
 
@@ -339,7 +374,6 @@ body > div{
 
 #affiliations > ul h1{
 	font-family: Oswald;
-	color: white;
 	font-style: italic;
 	font-weight: normal;
 	margin: auto;
@@ -350,4 +384,8 @@ body > div{
 	display: block;
 	color: #ffdd6a;
 	font-size: 0.7em;
+}
+
+.none{
+	display: none!important;
 }

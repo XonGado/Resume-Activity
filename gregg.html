@@ -8,26 +8,26 @@
 </head>
 <body>
 	<nav id="navigation">
-		<a href="resume.html"><i class="small material-icons">arrow_back</i>Home</a>
+		<a href="resume.html"><i class="fa fa-arrow-left"></i></a>
 		<a class="active" href="#"><img src="images/gregg2.png"> Gregg's Profile</a>
 		<a href="clyde.html"><img src="images/clyde2.png">Clyde's Profile</a>
-		<a class="int" href="#education"><span class="fa fa-graduation-cap"></span>&nbsp;Education</a>
-		<a class="int" href="#programs"><span class="fa fa-code"></span>&nbsp;Programming Skills</a>
-		<a class="int" href="#projects"><span class="fa fa-file"></span>&nbsp;Portfolio</a>
-		<a class="int" href="#affiliations"><span class="fa fa-users"></span>&nbsp;Affiliations</a>
-		<a class="int" href="#contact-details"><span class="fa fa-phone"></span>&nbsp;Contact</a>
+		<a class="int" href="#education"><span class="fa fa-graduation-cap"></span></a>
+		<a class="int" href="#programs"><span class="fa fa-code"></span></a>
+		<a class="int" href="#projects"><span class="fa fa-file"></span></a>
+		<a class="int" href="#affiliations"><span class="fa fa-users"></span></a>
+		<a class="int" href="#contact-details"><span class="fa fa-phone"></span></a>
 	</nav>
 	<div id="education">
-		<span class="fa fa-graduation-cap fa-6 header-icon"></span>
-		<!-- <img class="header-icon" src="images/school.png" alt="school"> -->
-		<h3 class="heading education">Education</h3>
+		<h3 class="heading education"><span class="fa fa-graduation-cap"></span> Education</h3>
 		<ul>
-			<li>
+			<li class="card">
+				<img src="images/rshs.jpg" alt="School's image">
 				<h2>Regional Science High School for Region VI</h2>
 				<p class="date">2010-2014</p>
 				<p>Highschool</p>
 			</li>
-			<li>
+			<li class="card">
+				<img src="images/upv.png" alt="School's image">
 				<h2>University of the Philippines Visayas</h2>
 				<p class="date">2014-present</p>
 				<p>College</p>
@@ -35,91 +35,108 @@
 		</ul>
 	</div>
 	<div id="programs">
-		<span class="fa fa-code fa-6 header-icon"></span>
-		<h3 class="heading programs">Programming Skills</h3>
-		<div id="lvl-projection">
-			<p id="language">&nbsp;</p>
-			<p id="rating">0</p>
-			<div id="bar">
-				<div id="inner-bar"></div>
+		<h3 class="heading programs"><span class="fa fa-code"></span> Programming Skills</h3>
+		<div class="stretcher">	
+			<ul>
+				<li class="ruby" data-rating="80"><i>Ruby</i></li>
+				<li class="html" data-rating="95"><i>HTML5</i></li>
+				<li class="java" data-rating="85"><i>Java</i></li>
+				<li class="js" data-rating="85"><i>JavaScript</i></li>
+				<li class="python" data-rating="50"><i>Python</i></li>
+				<li class="assm" data-rating="80"><i>Assembly</i></li>
+				<li class="css" data-rating="70"><i>CSS3</i></li>
+				<li class="php" data-rating="95"><i>PHP</i></li>
+				<li class="c" data-rating="80"><i>C</i></li>
+				<li class="mysql" data-rating="95"><i>MySQL</i></li>
+				<li class="perl" data-rating="65"><i>Perl</i></li>
+			</ul>
+			<div class="card" id="lvl-projection">
+				<p id="language">Select a language</p>
+				<p id="rating">0</p>
+				<div id="bar">
+					<div id="inner-bar"></div>
+				</div>
 			</div>
 		</div>
-		<ul>
-			<li class="ruby" data-rating="80"><i>Ruby</i></li>
-			<li class="html" data-rating="95"><i>HTML5</i></li>
-			<li class="java" data-rating="85"><i>Java</i></li>
-			<li class="js" data-rating="85"><i>JavaScript</i></li>
-			<li class="python" data-rating="50"><i>Python</i></li>
-			<li class="assm" data-rating="80"><i>Assembly</i></li>
-			<li class="css" data-rating="70"><i>CSS3</i></li>
-			<li class="php" data-rating="95"><i>PHP</i></li>
-			<li class="c" data-rating="80"><i>C</i></li>
-			<li class="mysql" data-rating="95"><i>MySQL</i></li>
-			<li class="perl" data-rating="65"><i>Perl</i></li>
-		</ul>
 	</div>
 	<div id="projects">
-		<span class="fa fa-file fa-6 header-icon"></span>
-		<h3 class="heading">Portfolio</h3>
+		<h3 class="heading"><span class="fa fa-file"></span> Portfolio</h3>
 		<div>
-			<article>
-				<h1>DorMe<small>CMSC 127 - A.Y. 2016-2017 1st Semester</small></h1>
-				<p class="short-description">
-					Web-based software application for students, , incoming or returning, to view housing establishments which are not part of the lodging services that UPV provides. Its second version also allowed registered owners to advertise their establishments.
-				</p>
+			<article class="card">
+				<img src="images/dorme.png" alt="project's screenshot">
+				<div class="details">
+					<h1>DorMe<small>CMSC 127 - A.Y. 2016-2017 1st Semester</small></h1>
+					<p class="short-description">
+						Web-based software application for students, , incoming or returning, to view housing establishments which are not part of the lodging services that UPV provides. Its second version also allowed registered owners to advertise their establishments.
+					</p>
+				</div>
 			</article>
-			<article>
-				<h1>Org_Y<small>CMSC 128 - A.Y. 2016-2017 1st Semester</small></h1>
-				<p class="short-description">
-					Web-based software application made for the various organizations of the University of the Philippines Visayas.
-				</p>
+			<article class="card none">
+				<img src="" alt="project's screenshot">
+				<div class="details">
+					<h1>Org_Y<small>CMSC 128 - A.Y. 2016-2017 1st Semester</small></h1>
+					<p class="short-description">
+						Web-based software application made for the various organizations of the University of the Philippines Visayas.
+					</p>
+				</div>
 			</article>
-			<article>
-				<h1>GitHelp<small>CMSC 129 - A.Y. 2016-2017 2nd Semester</small></h1>
-				<p class="short-description">
-					Web platform made to be a place for registered teachers to put their lessons online and for students with accounts to read them.
-				</p>
+			<article class="card">
+				<img src="images/githelp.png" alt="project's screenshot">
+				<div class="details">
+					<h1>GitHelp<small>CMSC 129 - A.Y. 2016-2017 2nd Semester</small></h1>
+					<p class="short-description">
+						Web platform made to be a place for registered teachers to put their lessons online and for students with accounts to read them.
+					</p>
+				</div>
 			</article>
-			<article>
-				<h1>Fill My Hole<small>CMSC 126 - A.Y. 2016-2017 2nd Semester</small></h1>
-				<p class="short-description">
-					Web-based game with the aim of matching a certain picture to fit a particular hole from a set of paintings given a limited amount of time
-				</p>
+			<article class="card">
+				<img src="images/fill.png" alt="project's screenshot">
+				<div class="details">
+					<h1>Fill My Hole<small>CMSC 126 - A.Y. 2016-2017 2nd Semester</small></h1>
+					<p class="short-description">
+						Web-based game with the aim of matching a certain picture to fit a particular hole from a set of paintings given a limited amount of time
+					</p>
+				</div>
 			</article>
 		</div>
 	</div>
 	<div id="affiliations">
-		<span class="fa fa-users fa-6 header-icon"></span>
-		<h3 class="heading">Affiliations</h3>
+		<h3 class="heading"><span class="fa fa-users"></span> Affiliations</h3>
 		<ul>
-			<li>
+			<li class="card">
+				<p>Member</p>
+				<img src="images/upak.jpg" alt="organization's photo">
 				<h1>UP Akeanon <small>(2014-present)</small></h1>
-				<p>Member</p>
 			</li>
-			<li>
+			<li class="card none">
+				<p>Member</p>
+				<img src="" alt="organization's photo">
 				<h1>Elektrons <small>(2014-present)</small></h1>
-				<p>Member</p>
 			</li>
-			<li>
+			<li class="card">
+				<p>Member</p>
+				<img src="images/komsai.png" alt="organization's photo">
 				<h1>Komsai.Org <small>(2014-present)</small></h1>
-				<p>Member</p>
 			</li>
-			<li>
+			<li class="card">
 				<p>Secretay</p>
+				<img src="images/komsai.png" alt="organization's photo">
 				<h1>Komsai.Org <small>(2016-2017)</small></h1>
 			</li>
 		</ul>
 	</div>
-	<div id="contact-details">
-		<!-- <h3 class="heading">Contact Details</h3> -->
-		<h3 class="heading">Reach Gregg through the following</h3>
-		<ul>
+	<footer id="contact-details">
+		<ul class="contact-details">
 			<li><i class="fa fa-envelope"></i> gmicay123@gmail.com</li>
-			<li><i class="fa fa-github"></i> github.com/gregg0912</li>
 			<li><i class="fa fa-phone"></i> +63 907 058 0991</li>
 			<li><i class="fa fa-home"></i> Rosario, Malinao, Aklan</li>
 		</ul>
-	</div>
+		<ul class="external">
+			<li><a href="#"><i class="fa fa-github"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+		</ul>
+	</footer>
 	<script type="text/javascript" src="js/profile.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -127,7 +144,7 @@
 		    event.preventDefault();
 
 		    $('html, body').animate({
-		        scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+		        scrollTop: $( $.attr(this, 'href') ).offset().top - 60
 		    }, 500);
 		});
 	</script>

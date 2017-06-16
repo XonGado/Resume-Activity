@@ -67,7 +67,7 @@ function showContent(clicked_content, other_content){
 }
 
 function hideContent(content){
-	content.style.top = 100 + "vh";
+	content.style.top = 110 + "vh";
 }
 
 function showDetails(details){
