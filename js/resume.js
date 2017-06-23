@@ -8,7 +8,7 @@ window.onload = function(){
 	var greggClo = document.getElementById("close-gregg");
 	var clydeClo = document.getElementById("close-clyde");
 
-	var clydeDet = document.getElementById("more-details-c");
+	// var clydeDet = document.getElementById("more-details-c");
 	var clydeBod = document.getElementById("clyde-body");
 	var clydeHed = document.getElementById("clyde-header");
 
@@ -42,17 +42,34 @@ window.onload = function(){
 		active = 0;
 	});
 
-	clydeDet.addEventListener("click", function(){
-		clydeDet.style.opacity = 0;
-		clydeDet.style.height = 0;
-		clydeDet.style.padding = 0;
-		clydeDet.style.margin = 0;
-		setTimeout(function(){
-			clydeDet.style.display = "none";
-		},1000);  
-		clydeHed.style.width = 50 + "%";
-		showDetails(clydeBod);
+	// clydeDet.addEventListener("click", function(){
+	// 	clydeDet.style.opacity = 0;
+	// 	clydeDet.style.height = 0;
+	// 	clydeDet.style.padding = 0;
+	// 	clydeDet.style.margin = 0;
+	// 	setTimeout(function(){
+	// 		clydeDet.style.display = "none";
+	// 	},1000);  
+	// 	clydeHed.style.width = 50 + "%";
+	// 	showDetails(clydeBod);
+	// });
+
+	document.getElementsByClassName("see")[0].addEventListener("click", function(e){
+		document.getElementById("details").onload = function(e){
+			document.getElementById("details-container").style.top = 0;
+		};
 	});
+
+	document.getElementsByClassName("see")[1].addEventListener("click", function(){
+		document.getElementById("details").onload = function(){
+			document.getElementById("details-container").style.top = 0;
+		};
+	});
+
+	document.getElementById("iframe-close").addEventListener("click", function(){
+		document.getElementById("details-container").style.top = 100 + "vh";
+	});
+
 }
 
 function showContent(clicked_content, other_content){
@@ -72,7 +89,7 @@ function hideContent(content){
 
 function showDetails(details){
 	var divisions = details.children;
-	console.log(divisions);
+	// console.log(divisions);
 
 	details.style.left = 40 + "vw";
 	// setTimeout(function(){

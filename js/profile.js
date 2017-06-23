@@ -2,7 +2,7 @@ window.onload = function(){
 	var languages = document.querySelectorAll("#programs ul > li");
 
 	for (var i = 0; i < languages.length; i++) {
-		console.log("adding listener for " + i);
+		// console.log("adding listener for " + i);
 		addLanguageRatingListener(i);
 	}
 
@@ -12,7 +12,7 @@ window.onload = function(){
 function addLanguageRatingListener(index){
 	var languages = document.querySelectorAll("#programs ul > li");
 	languages[index].addEventListener("click", function(){changeRating(index);});
-	console.log("finshed adding listener for " + index);
+	// console.log("finshed adding listener for " + index);
 }
 
 function changeRating(index){
@@ -25,7 +25,7 @@ function changeRating(index){
 
 	var name = languages[index].children[0].innerHTML;
 	var proficiency = languages[index].getAttribute("data-rating");
-	console.log("proficiency: " + proficiency);
+	// console.log("proficiency: " + proficiency);
 
 	if (proficiency) {
 		bar.style.width = proficiency + "%";
@@ -47,29 +47,29 @@ function changeRating(index){
 			rate = rating.innerHTML;
 			interval = setInterval(function(){
 				rate = rating.innerHTML;
-				console.log("rating: " + rate);
+				// console.log("rating: " + rate);
 				rate--;
 				rating.innerHTML = rate;
 				if (rate <= proficiency) {
 					clearInterval(interval);
 				}
-				console.log("looping down");
+				// console.log("looping down");
 			}, 5);
 		} else if(rating.innerHTML < proficiency){
 			rate = rating.innerHTML;
 			interval = setInterval(function(){
 				rate = rating.innerHTML;
-				console.log("rating: " + rate);
+				// console.log("rating: " + rate);
 				rate++;
 				rating.innerHTML = rate;
 				if (rate >= proficiency) {
 					clearInterval(interval);
 				}
-				console.log("looping up");
+				// console.log("looping up");
 			}, 5);
 		}
 	} else{
-		console.log("proficiency: " + proficiency);
+		// console.log("proficiency: " + proficiency);
 	}
 	
 }

@@ -4,7 +4,7 @@
 	<title>Resume</title>
 	<!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-glyphicons.css"/> -->
 	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css"/>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 	<link rel="stylesheet" type="text/css" href="css/resume.css"/>
 </head>
 <body>
@@ -45,7 +45,7 @@
 				<h3 class="title">BS in Computer Science</h3>
 				<p class="introduction">I am an amateur back-end developer acting as a project manager to oversee most of the web development of our team. I also administer, design, and manage most the database in our projects.</p>
 				<!-- <h4 class="email">gmicay123@gmail.com</h4> -->
-				<a href="gregg.html" class="see"><i class="fa fa-eye"></i>&nbsp;See Gregg's profile</a>
+				<a href="gregg.html" class="see" target="details"><i class="fa fa-eye"></i>&nbsp;See Gregg's profile</a>
 			</div>
 		</div>
 	</div>
@@ -74,10 +74,15 @@
 				<h3 class="title">BS in Computer Science</h3>
 				<p class="introduction">I am an amateur web developer inclined in UX/UI Design and front-end development, and back-end development specifically in database administration and management.</p>
 				<h4 class="email">cjubs.delgado@gmail.com</h4>		
-				<a href="clyde.html" class="see"><i class="fa fa-eye"></i>&nbsp;See Clyde's profile</a>
+				<a href="clyde.html" class="see" target="details"><i class="fa fa-eye"></i>&nbsp;See Clyde's profile</a>
 				<!-- <button class="more-btn" id="more-details-c">More Details</button> -->
 			</div>
 		</div>
+	</div>
+	<div id="details-container">
+		<span class="close" id="iframe-close">&times;</span>
+		<iframe src="" id="details" name="details" data-current="">
+		</iframe>
 	</div>
 	<script type="text/javascript" src="js/resume.js"></script>
 </body>

@@ -63,12 +63,15 @@ body{
 	transition: 0.2s;
 }
 
-#navigation a:hover{
-	background-color: rgba(0, 0, 0, 0.2);
+#navigation a:hover,
+#navigation a:hover .fa{
+	background-color: #85c7dc;
+	color: white;
 }
 
 #navigation a.active{
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: #51abe4;
+	color: white;
 	cursor: default;
 }
 
@@ -115,6 +118,7 @@ body > div{
 	list-style: none;
 	width: 80%;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 #education > ul > li{
@@ -165,6 +169,7 @@ body > div{
 	overflow: hidden;
 	flex-direction: column;
 	margin: 0;
+	flex-wrap: wrap;
 }
 
 #programs ul li{
@@ -290,7 +295,8 @@ body > div{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: stretch;
-	width: 60%;
+	width: 100%;
+	/* background-color: #222; */
 }
 
 #projects > div > article{
@@ -305,6 +311,8 @@ body > div{
 #projects > div > article h1{
 	text-align: center;
 	font-size: 2em;
+	color: #555;
+	padding: 0.5rem 1rem;
 }
 
 #projects > div > article h1 small{
@@ -315,22 +323,25 @@ body > div{
 	font-size: 0.6em;
 	font-weight: normal;
 	font-style: italic;
+	padding: 0.5rem 1rem;
 }
 
 #projects .short-description{
 	text-align: center;
 	width: 100%;
+	color: #888;
+	padding: 0.5rem 1rem;
 }
 
 #projects .details{
-	width: 30%;
+	width: 100%;
 }
 
 
 #projects .card img{
 	display: block;
-	height: 300px;
-	width: 70%;
+	height: 70vh;
+	/* width: 70%; */
 	box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -344,9 +355,9 @@ body > div{
 
 #affiliations .card img{
 	display: block;
-	width: 200px;
-	height: 200px;
-	margin: 10px auto;
+	width: 80%;
+	/* height: 100%; */
+	margin: 10% auto;
 	text-align: center;
 	vertical-align: middle;
 }
